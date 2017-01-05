@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+pylint --rcfile .pylintrc -j 4 ultra_config_kms_cli
