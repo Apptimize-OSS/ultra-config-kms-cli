@@ -11,12 +11,12 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-    # TODO: put package requirements here
+    'ultra-config[aws]>=0.6.2',
+    'boto3'
 ]
 
 test_requirements = [
     'pylint'
-    # TODO: put package test requirements here
 ]
 
 setup(
@@ -25,13 +25,9 @@ setup(
     description="A simple cli package for easily updating ECS task definition files with secrets",
     long_description=readme + '\n\n' + history,
     author="Apptimize (Tim Martin)",
-    author_email='na',
+    author_email='engineering@apptimize.com',
     url='https://github.com/Apptimize-OSS/ultra-config-kms-cli',
-    packages=[
-        'ultra_config_kms_cli',
-    ],
-    package_dir={'ultra_config_kms_cli':
-                 'ultra_config_kms_cli'},
+    py_modules=['ultra_config_kms_cli'],
     entry_points={
         'console_scripts': [
             'ultra_config_kms_cli=ultra_config_kms_cli.cli:main'
